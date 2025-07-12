@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodMart.WebUI", "FoodMart.WebUI\FoodMart.WebUI.csproj", "{D71C1776-B0EA-459F-8861-816352F4BECD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodMart.EntityLayer", "FoodMart.EntityLayer\FoodMart.EntityLayer.csproj", "{677E3309-9493-4E17-9F52-A403B02ECB7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodMart.DataAccessLayer", "FoodMart.DataAccessLayer\FoodMart.DataAccessLayer.csproj", "{F7425C70-1352-43A1-8214-459B2228DBA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodMart.BusinnessLayer", "FoodMart.BusinnessLayer\FoodMart.BusinnessLayer.csproj", "{207A35BB-1522-40B5-86F3-4A9F0A41A42D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodMart.DtoLayer", "FoodMart.DtoLayer\FoodMart.DtoLayer.csproj", "{B27B3BA7-474A-4BFA-9616-82C553AC5507}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D71C1776-B0EA-459F-8861-816352F4BECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D71C1776-B0EA-459F-8861-816352F4BECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D71C1776-B0EA-459F-8861-816352F4BECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D71C1776-B0EA-459F-8861-816352F4BECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{677E3309-9493-4E17-9F52-A403B02ECB7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{677E3309-9493-4E17-9F52-A403B02ECB7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{677E3309-9493-4E17-9F52-A403B02ECB7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{677E3309-9493-4E17-9F52-A403B02ECB7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7425C70-1352-43A1-8214-459B2228DBA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7425C70-1352-43A1-8214-459B2228DBA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7425C70-1352-43A1-8214-459B2228DBA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7425C70-1352-43A1-8214-459B2228DBA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{207A35BB-1522-40B5-86F3-4A9F0A41A42D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{207A35BB-1522-40B5-86F3-4A9F0A41A42D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{207A35BB-1522-40B5-86F3-4A9F0A41A42D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{207A35BB-1522-40B5-86F3-4A9F0A41A42D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B27B3BA7-474A-4BFA-9616-82C553AC5507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B27B3BA7-474A-4BFA-9616-82C553AC5507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B27B3BA7-474A-4BFA-9616-82C553AC5507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B27B3BA7-474A-4BFA-9616-82C553AC5507}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30B5ACB3-3EFA-41E1-BF66-DFD1C0DE13E2}
+	EndGlobalSection
+EndGlobal

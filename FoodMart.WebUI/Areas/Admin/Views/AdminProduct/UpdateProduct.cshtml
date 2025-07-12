@@ -1,0 +1,58 @@
+﻿@model UpdateProductDto
+@{
+    ViewData["Title"] = "UpdateProduct";
+    Layout = "~/Areas/Admin/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<!-- Basic Layout -->
+<div class="col-xxl">
+    <div class="card mb-4">
+        <div class="card-header d-flex align-items-center justify-content-between">
+            <h5 class="mb-0">Ürün Düzenleme</h5>
+        </div>
+        <div class="card-body">
+            <form method="post">
+
+                <input type="hidden" asp-for="ProductId" />
+
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="basic-default-name">Ürün Adı</label>
+                    <div class="col-sm-10">
+                        <input type="text" asp-for="Name" class="form-control" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="basic-default-name">Stok Sayısı</label>
+                    <div class="col-sm-10">
+                        <input type="text" asp-for="StockCount" class="form-control" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="basic-default-name">Ürün Fiyatı</label>
+                    <div class="col-sm-10">
+                        <input type="number" asp-for="Price" class="form-control" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="basic-default-name">Ürün Kategorisi</label>
+                    <div class="col-sm-10">
+                        <select class="form-control" asp-for="CategoryId" asp-items="@ViewBag.CategoryValues">
+                            <option value="--Kategori Seçiniz--"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="basic-default-name">Ürün Görseli (Url)</label>
+                    <div class="col-sm-10">
+                        <input type="text" asp-for="ImageUrl" class="form-control" />
+                    </div>
+                </div>
+                <div class="row justify-content-end">
+                    <div class="col-sm-10">
+                        <button class="btn btn-primary">Kaydet</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

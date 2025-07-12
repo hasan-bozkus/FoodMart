@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    @await Component.InvokeAsync("_UILayoutHeadComponentPartial")
+
+<body>
+
+    @await Component.InvokeAsync("_UILayoutSvgComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutPreLoaderComponentPartial")
+    
+    @await Component.InvokeAsync("_UILayoutHeaderComponentPartial")
+
+    <section class="py-3" style="background-image: url('/FoodMart-1.0.0/images/background-pattern.jpg');background-repeat: no-repeat;background-size: cover;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="banner-blocks">
+
+                        @await Component.InvokeAsync("_UILayoutSliderComponentPartial")
+
+                        @await Component.InvokeAsync("_UILayoutDiscountComponentPartial")
+                      
+
+                    </div>
+                    <!-- / Banner Blocks -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @await Component.InvokeAsync("_UILayoutCategoryComponentPartial")
+
+
+    @await Component.InvokeAsync("_UILayoutProductComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutSubDiscountComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutLowestPricedProductComponentPartial")
+    
+
+    @await Component.InvokeAsync("_UILayoutNewsLetterComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutApplicationComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutPeopleViewingComponentPartial")
+  
+    @await Component.InvokeAsync("_UILayoutFooterComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutScriptsComponentPartial")
+
+</body>
+</html>

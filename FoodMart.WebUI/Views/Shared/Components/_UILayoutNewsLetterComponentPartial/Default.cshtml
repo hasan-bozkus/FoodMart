@@ -1,0 +1,56 @@
+﻿@model CreateSendEmailDto
+@if (TempData["Success"] != null)
+{
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: '@Html.Raw(TempData["Success"])',
+
+            showConfirmButton: true
+
+        });
+    </script>
+}
+
+<section class="py-5">
+    <div class="container-fluid">
+
+        <div class="bg-secondary py-5 my-5 rounded-5" style="background: url('images/bg-leaves-img-pattern.png') no-repeat;">
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-md-6 p-5">
+                        <div class="section-header">
+                            <h2 class="section-title display-4">İlk Satın Alımınızda <span class="text-primary">25% İndirim</span> Kazanın</h2>
+                        </div>
+                        <p>
+                            FoodMart'da avantajlarla dolu alışverişin keyfini çıkarın.
+                            E-posta adresinizi girerek kampanyamıza katılın ve ilk siparişinizde %25 indirim kazanın. Size özel indirim kodu anında e-posta adresinize gönderilecek!
+                        </p>
+                    </div>
+                    <div class="col-md-6 p-5">
+                        <form asp-action="SendEmail" asp-controller="UILayout" method="post">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Adınız Soyadınız</label>
+                                <input type="text"
+                                       class="form-control form-control-lg" id="name" asp-for="Name" placeholder="Adınız">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">E-Posta Adresiniz</label>
+                                <input type="email" class="form-control form-control-lg" id="email" asp-for="ReceiverEmail" placeholder="ornek@mail.com">
+                            </div>
+                           
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-dark btn-lg">Gönder</button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>

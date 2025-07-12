@@ -1,0 +1,39 @@
+﻿@model List<ResultPeopleViewingDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <h5 class="card-header">Arama Terimleri Paneli</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Başlık</th>
+                    <th>Güncelle</th>
+                    <th>Sil</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>@item.Title</strong></td>
+                        <td>
+                            <a class="btn btn-outline-success" href="/Admin/AdminPeopleViewing/UpdatePeopleViewing/@item.PeopleViewingId"><i class="bx bx-edit-alt me-1"></i> Güncelle</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-danger" href="/Admin/AdminPeopleViewing/DeletePeopleViewing/@item.PeopleViewingId"><i class="bx bx-trash me-1"></i> Sil</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+        <a href="/Admin/AdminPeopleViewing/CreatePeopleViewing" class="btn btn-primary">Yeni Arama Terimi Girişi</a>
+        <br />
+        <br />
+
+    </div>
+</div>

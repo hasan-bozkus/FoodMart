@@ -1,0 +1,46 @@
+﻿@model List<ResultProductWithCategoryDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <h5 class="card-header">Ürün Paneli</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ürün Adı</th>
+                    <th>Stok</th>
+                    <th>Fiyat</th>
+                    <th>Kategori Adı</th>
+                    <th>Güncelle</th>
+                    <th>Sil</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>@item.Name</strong></td>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> @item.StockCount</td>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> ₺ @item.Price.ToString("N2")</td>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> @item.Category.CategoryName</td>
+                        <td>
+                            <a class="btn btn-outline-success" href="/Admin/AdminProduct/UpdateProduct/@item.ProductId"><i class="bx bx-edit-alt me-1"></i> Güncelle</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-danger" href="/Admin/AdminProduct/DeleteProduct/@item.ProductId"><i class="bx bx-trash me-1"></i> Sil</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+        <a href="/Admin/AdminProduct/CreateProduct/" class="btn btn-primary">Yeni Ürün Girişi</a>
+        <br />
+        <br />
+
+    </div>
+</div>
+

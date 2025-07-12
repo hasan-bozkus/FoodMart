@@ -1,0 +1,25 @@
+﻿@model List<ResultDiscountDto>
+
+
+<section class="py-5">
+    <div class="container-fluid">
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6">
+                    <div class="banner-ad bg-danger mb-3" style="background: url('@item.ImageUrl');background-repeat: no-repeat;background-position: right bottom;">
+                        <div class="banner-content p-5">
+                            <div class="categories text-primary fs-3 fw-bold">@item.DiscountRate</div>
+                            <h3 class="banner-title">@item.Title</h3>
+                            <p>@item.SubTitle</p>
+                            <a href="#" class="btn btn-dark text-uppercase">Şimdi Keşfet</a>
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>

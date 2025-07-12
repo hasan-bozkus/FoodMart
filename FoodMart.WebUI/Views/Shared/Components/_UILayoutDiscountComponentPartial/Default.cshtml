@@ -1,0 +1,32 @@
+﻿@model List<ResultDiscountDto>
+
+    @{
+    var lastTwoDiscounts = Model.Skip(Math.Max(0, Model.Count - 2)).Take(2).ToList(); // Son 2 veri
+    int index = 0;
+    var pastelColors = new List<string> {
+        "#FFD1DC", // Pastel pembe
+        "#C7CEEA", // Pastel mavi
+        "#FFDAC1", // Pastel şeftali
+        "#E2F0CB", // Pastel nane
+        "#FDDFD5"  // Pastel koral
+    };
+    int colorIndex = 0;
+    }
+
+@foreach (var item in lastTwoDiscounts)
+{
+    var blockClass = index % 2 == 0 ? "block-2" : "block-3";
+    var bgPosition = index % 2 == 0 ? "right bottom" : "right top";
+    var bgColor = pastelColors[index % pastelColors.Count];
+
+    <div class="banner-ad @blockClass" style="background:url('@item.ImageUrl') no-repeat; background-color: @bgColor; background-position: @bgPosition">
+        <div class="row banner-content p-5">
+            <div class="content-wrapper col-md-7">
+                <div class="categories sale mb-3 pb-3">@item.DiscountRate</div>
+                <h3 class="banner-title">@item.Title</h3>
+                <a href="#" class="d-flex align-items-center nav-link">Alışverişe Başla <svg width="24" height="24"><use xlink:href="#arrow-right"></use></svg></a>
+            </div>
+        </div>
+    </div>
+    index++;
+}
